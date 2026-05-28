@@ -100,6 +100,16 @@ mensagem: "Produto deletado com sucesso",
 
  });
 
+ app.get("/admin", verificarAcesso, (req,res) => {
+    res.json({
+        mensagem: "Área de administração acessada!"
+    });
+ });
+
+ app.listen(PORT, () => {
+    console.log(` http://localhost:${PORT}`);
+ });
+
 
 
 
